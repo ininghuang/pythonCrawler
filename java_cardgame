@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+class Card {
+    private String symbol;
+
+    public Card(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+}
+
+public class FlipCardGame {
+    public static void main(String[] args) {
+        List<Card> cards = new ArrayList<>();
+        cards.add(new Card("A"));
+        cards.add(new Card("B"));
+        cards.add(new Card("C"));
+        cards.add(new Card("A"));
+        cards.add(new Card("B"));
+        cards.add(new Card("C"));
+
+        Collections.shuffle(cards);
+
+        boolean[] flipped = new boolean[cards.size()];
+
+        // Game logic here
+    }
+}
